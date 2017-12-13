@@ -77,7 +77,7 @@
             this.dataGridView1.RowHeadersWidth = 100;
             this.dataGridView1.Size = new System.Drawing.Size(1268, 268);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Shopping
             // 

@@ -33,7 +33,9 @@ namespace Pond_s_Shop
             oda = new MySqlDataAdapter("SELECT * FROM item", conn);
             dt = new DataTable();
             oda.Fill(dt);
+            dt.Columns.Add(new DataColumn("Amount", typeof(string)));
             dataGridView1.DataSource = dt;
+            
             DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
             dataGridView1.Columns.Add(chk);
             chk.HeaderText = "Check Data";
@@ -46,6 +48,7 @@ namespace Pond_s_Shop
             dataGridView1.Columns[2].ReadOnly = true;
             dataGridView1.Columns[3].ReadOnly = true;
             dataGridView1.Columns[4].ReadOnly = true;
+            dataGridView1.Columns[5].ReadOnly = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,9 +62,29 @@ namespace Pond_s_Shop
             Program.closeProgram();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 5)
+            {
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value != null && dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value.ToString().Equals("True"))
+                {
+                    //MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value + "True");
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = false;
+                }
+                else
+                {
+                    //MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value + "False");
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
+                }
+            }
+            else if(e.ColumnIndex == 6)
+            {
+                if (!dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex-1].Value.ToString().Equals(""))
+                {
+                    //MessageBox.Show("sDasdsad");
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Value = "";
+                }
+            }
         }
     }
 }
