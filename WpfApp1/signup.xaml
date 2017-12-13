@@ -15,11 +15,11 @@
         <Label Content="phone :" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="102"/>
         <Label Content="กรุณากรอกข้อมูลให้ครบถ้วน" HorizontalAlignment="Left" Margin="193,10,0,0" VerticalAlignment="Top" Width="171"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="88,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="88,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="88,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="88,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="88,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="88,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
         <Button Content="accept" HorizontalAlignment="Left" Margin="454,194,0,0" VerticalAlignment="Top" Width="101" Height="41" Click="Button_Click"/>
+        <PasswordBox HorizontalAlignment="Left" Height="19" Margin="88,92,0,0" VerticalAlignment="Top" Width="276"/>
     </Grid>
 </Window>
