@@ -31,7 +31,7 @@ namespace WpfApp1
             password = "123456";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            database + ";" + "UID=" + uid + ";"; //+ "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
         }
