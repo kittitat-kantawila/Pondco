@@ -24,7 +24,7 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Kuy");
+            MessageBox.Show("Ku");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
