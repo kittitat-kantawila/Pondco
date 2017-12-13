@@ -16,7 +16,7 @@ namespace Pond_s_Shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Shopping());
+            Application.Run(new Login());
         }
     }
 }

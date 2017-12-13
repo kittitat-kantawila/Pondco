@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.SqlClient;
+
+using MySql.Data.MySqlClient;
 
 namespace Pond_s_Shop
 {
     public partial class Shopping : Form
     {
-        OleDbDataAdapter oda;
-        OleDbCommandBuilder ocb;
+        
+        MySqlDataAdapter oda;
+
         DataTable dt;
         public Shopping()
         {
@@ -22,11 +26,20 @@ namespace Pond_s_Shop
         }
 
         private void Shopping_Load(object sender, EventArgs e)
+
+
         {
-            OleDbConnection conn = new OleDbConnection("server=localhost;user id=root;database=inventory_pond");
-            oda = new OleDbDataAdapter("SELECT (id, name, price, unit) FROM item", conn);
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=inventory_pond");
+            oda = new MySqlDataAdapter("SELECT * FROM item", conn);
             dt = new DataTable();
+            dt.
+            oda.Fill(dt);
             dataGridView1.DataSource = dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

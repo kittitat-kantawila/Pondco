@@ -54,6 +54,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "ไปหน้าตะกร้าสินค้า";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -68,9 +69,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(108, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(226, 123);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(968, 373);
+            this.dataGridView1.RowHeadersWidth = 100;
+            this.dataGridView1.Size = new System.Drawing.Size(826, 400);
             this.dataGridView1.TabIndex = 3;
             // 
             // Shopping
