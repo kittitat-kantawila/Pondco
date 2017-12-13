@@ -19,3 +19,7 @@ D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csproj.Generate
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csproj.CoreCompileInputs.cache
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.exe
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.pdb
+D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\bin\Debug\MySql.Data.dll
+D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\bin\Debug\MySql.Web.dll
+D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\bin\Debug\MySql.Data.xml
+D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\bin\Debug\MySql.Web.xml

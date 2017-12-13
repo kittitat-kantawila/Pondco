@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace WpfApp1
@@ -25,9 +26,9 @@ namespace WpfApp1
         //Initialize values
         private void Initialize()
         {
-            server = "localhost";
+            server = "10.0.0.205";
             database = "inventory_pond";
-            uid = "root";
+            uid = "ong";
             password = "123456";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
@@ -37,7 +38,7 @@ namespace WpfApp1
         }
 
         //open connection to database
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -180,6 +181,60 @@ namespace WpfApp1
                 cmd.ExecuteNonQuery();
                 this.CloseConnection();
             }
+        }
+
+        public bool SearchCustomer(string username,string password)
+        {
+            bool found = false;
+            string query = "SELECT * FROM customer WHERE username="+"'"+ username+"'"+"and password="+"'"+password+"'";
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //password = dataReader["password"] + "";
+                    found = true;
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+            }
+            return found;
+        }
+
+        public bool SearchUserID(string username)
+        {
+            bool found = false;
+            string query = "SELECT * FROM customer WHERE username=" + "'" + username + "'";
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //password = dataReader["password"] + "";
+                    found = true;
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+            }
+            return found;
         }
 
         //Select statement

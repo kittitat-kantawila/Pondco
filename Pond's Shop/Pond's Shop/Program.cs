@@ -8,6 +8,7 @@ namespace Pond_s_Shop
 {
     static class Program
     {
+        private static Form MainWindow;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,13 @@ namespace Pond_s_Shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            MainWindow = new Login();
+            Application.Run(MainWindow);
+        }
+        public static void closeProgram()
+        {
+            MainWindow.Show();
+            //MainWindow.Close();
         }
     }
 }
