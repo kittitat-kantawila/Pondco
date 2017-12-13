@@ -26,5 +26,12 @@ namespace Pond_s_Shop
         {
 
         }
+
+        private void ClickBack(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Close();
+        }
     }
 }

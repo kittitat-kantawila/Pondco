@@ -26,5 +26,12 @@ namespace Pond_s_Shop
         {
 
         }
+
+        private void Signup_Click(object sender, EventArgs e)
+        {
+            Signup su = new Signup();
+            su.Show();
+            this.Hide();
+        }
     }
 }
