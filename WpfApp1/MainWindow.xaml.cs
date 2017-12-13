@@ -29,7 +29,10 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hee");
+            DBConnect db = new DBConnect();
+            bool test = db.OpenConnection();
+            if (test)
+                MessageBox.Show("Pond");
         }
     }
 }
