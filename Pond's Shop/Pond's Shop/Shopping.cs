@@ -46,5 +46,10 @@ namespace Pond_s_Shop
             // Code
             Program.closeProgram();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
