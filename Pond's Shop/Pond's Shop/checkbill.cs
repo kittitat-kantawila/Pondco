@@ -43,7 +43,7 @@ namespace Pond_s_Shop
         private void checkbill_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("server=10.0.0.205;user id=ong;database=inventory_pond");
-            oda = new MySqlDataAdapter("SELECT * FROM was_buy", conn);
+            oda = new MySqlDataAdapter("SELECT * FROM was_buy WHERE status=0", conn);
             dtb = new DataTable();
             oda.Fill(dtb);
             dtb.Columns.Add(new DataColumn("Item", typeof(string)));
@@ -87,6 +87,17 @@ namespace Pond_s_Shop
             dbc.DeleteQuery("DELETE FROM was_buy WHERE status=0");
             Login newlogin = new Login();
             newlogin.Show();
+            this.Hide();
+        }
+        //confirm
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DBConnect dbc = new DBConnect();
+            dbc.UpdateQuery("UPDATE item,was_buy SET item.unit=item.unit-was_buy.total_unit WHERE item.id=was_buy.id and was_buy.status=0");
+            dbc.UpdateQuery("UPDATE was_buy SET status=1 WHERE username='"+username+"' and "+"status=0");
+            MessageBox.Show("Transaction successful");
+            Shopping newsp = new Shopping(username);
+            newsp.Show();
             this.Hide();
         }
     }
