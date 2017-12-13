@@ -44,6 +44,12 @@ namespace Pond_s_Shop
                 userfield.Text = "";
                 passfield.Text = "";
             }
+            else
+            {
+                Shopping sp = new Shopping();
+                sp.Show();
+                this.Hide();
+            }
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

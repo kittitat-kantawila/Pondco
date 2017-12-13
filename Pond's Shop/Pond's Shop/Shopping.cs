@@ -32,7 +32,6 @@ namespace Pond_s_Shop
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=inventory_pond");
             oda = new MySqlDataAdapter("SELECT * FROM item", conn);
             dt = new DataTable();
-            dt.
             oda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
@@ -40,6 +39,12 @@ namespace Pond_s_Shop
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            // Code
+            Program.closeProgram();
         }
     }
 }
