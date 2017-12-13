@@ -29,11 +29,23 @@ namespace Pond_s_Shop
 
 
         {
-            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=inventory_pond");
+            MySqlConnection conn = new MySqlConnection("server=10.0.0.205;user id=ong;database=inventory_pond");
             oda = new MySqlDataAdapter("SELECT * FROM item", conn);
             dt = new DataTable();
             oda.Fill(dt);
             dataGridView1.DataSource = dt;
+            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+            dataGridView1.Columns.Add(chk);
+            chk.HeaderText = "Check Data";
+            chk.Name = "chk";
+            //dataGridView1.Rows[2].Cells[5].Value = true;
+            dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[0].ReadOnly = true;
+            dataGridView1.Columns[1].ReadOnly = true;
+            dataGridView1.Columns[2].ReadOnly = true;
+            dataGridView1.Columns[3].ReadOnly = true;
+            dataGridView1.Columns[4].ReadOnly = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
