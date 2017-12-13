@@ -46,7 +46,7 @@ namespace Pond_s_Shop
             }
             else
             {
-                Shopping sp = new Shopping();
+                Shopping sp = new Shopping(user);
                 sp.Show();
                 this.Hide();
             }

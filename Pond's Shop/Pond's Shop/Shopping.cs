@@ -11,6 +11,7 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 
 using MySql.Data.MySqlClient;
+using WpfApp1;
 
 namespace Pond_s_Shop
 {
@@ -18,11 +19,14 @@ namespace Pond_s_Shop
     {
         
         MySqlDataAdapter oda;
-
         DataTable dt;
-        public Shopping()
+        private string username;
+        private bool canAdd = false;
+
+        public Shopping(string user)
         {
             InitializeComponent();
+            this.username = user;
         }
 
         private void Shopping_Load(object sender, EventArgs e)
@@ -50,10 +54,69 @@ namespace Pond_s_Shop
             dataGridView1.Columns[4].ReadOnly = true;
             dataGridView1.Columns[5].ReadOnly = true;
         }
-
+         //go to cart
         private void button1_Click(object sender, EventArgs e)
         {
+            //pull selected (true) item
+            int n = dataGridView1.RowCount;
+            for(int i=0;i<n;i++)
+            {
+                //check don't empty
+                if (!dataGridView1.Rows[i].Cells[5].Value.ToString().Equals(""))
+                {
+                    int amount = int.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                    int max = int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                    // not enough
+                    if (amount > max)
+                    {
+                        MessageBox.Show("Not enough item");
+                        canAdd = false;
+                        return ;
+                    }
+                    //can add to cart
+                    else
+                    {
+                        canAdd = true;
+                        continue;
+                        DateTime time = DateTime.Now;
+                        string day = "" + time.Year+ "-" + time.Month+ "-"+ time.Day;
+                        string pid = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                        float total = amount * int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        DBConnect dbc = new DBConnect();
+                        dbc.InsertQuery("INSERT INTO was_buy (id,username,date,total_unit,total_price_per_item) VALUES('"+ pid +"','"+ this.username + "','" + day + "'," + amount+"," +total+")");
+                        MessageBox.Show("Add to cart successful");
+                    }
+                }
+                else if(dataGridView1.Rows[i].Cells[6].Value != null && dataGridView1.Rows[i].Cells[6].Value.ToString().Equals("True"))
+                {
+                    MessageBox.Show("please enter amount");
+                    canAdd = false;
+                    return;
+                }
+            }
+            if(canAdd)
+            {
+                for(int i=0;i<n;i++)
+                {
+                    if (!dataGridView1.Rows[i].Cells[5].Value.ToString().Equals(""))
+                    {
+                        int amount = int.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                        //can add to cart
+                        DateTime time = DateTime.Now;
+                        string day = "" + time.Year + "-" + time.Month + "-" + time.Day;
+                        string pid = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                        float total = amount * int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        DBConnect dbc = new DBConnect();
+                        dbc.InsertQuery("INSERT INTO was_buy (id,username,date,total_unit,total_price_per_item) VALUES('" + pid + "','" + this.username + "','" + day + "'," + amount + "," + total + ")");
+                    }
+                }
+                canAdd = false;
+                MessageBox.Show("Add to cart successful");
+            }
 
+            //check amount
+
+            //add to database and goto next page
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
