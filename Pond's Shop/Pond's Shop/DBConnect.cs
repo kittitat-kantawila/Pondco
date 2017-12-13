@@ -183,10 +183,10 @@ namespace WpfApp1
             }
         }
 
-        public bool SearchCustomer(string username,string password)
+        public bool SearchCustomer(string username, string password)
         {
             bool found = false;
-            string query = "SELECT * FROM customer WHERE username="+"'"+ username+"'"+"and password="+"'"+password+"'";
+            string query = "SELECT * FROM customer WHERE username=" + "'" + username + "'" + "and password=" + "'" + password + "'";
             if (this.OpenConnection() == true)
             {
                 //Create Command
@@ -237,6 +237,37 @@ namespace WpfApp1
             return found;
         }
 
+        public string selectOne(string query,string get)
+        {
+            string strvalue = "";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    strvalue = dataReader[get] + "";
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return strvalue;
+            }
+            else
+            {
+                return strvalue;
+            }
+        }
         //Select statement
         public List<string>[] Select()
         {

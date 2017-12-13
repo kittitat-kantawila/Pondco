@@ -100,7 +100,7 @@ namespace Pond_s_Shop
                         string pid = dataGridView1.Rows[i].Cells[0].Value.ToString();
                         float total = amount * int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
                         DBConnect dbc = new DBConnect();
-                        dbc.InsertQuery("INSERT INTO was_buy (id,username,date,total_unit,total_price_per_item,status) VALUES('" + pid + "','" + this.username + "','" + day + "'," + amount + "," + total +","+ "0)");
+                        dbc.InsertQuery("INSERT INTO was_buy (id,username,date,total_unit,total_price_per_item,status) VALUES('" + pid + "','" + this.username +"','" + day + "'," + amount + "," + total +","+ "0)");
                     }
                 }
                 canAdd = false;
