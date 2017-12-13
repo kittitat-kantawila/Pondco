@@ -22,8 +22,7 @@ namespace Pond_s_Shop
         }
         public static void closeProgram()
         {
-            MainWindow.Show();
-            //MainWindow.Close();
+            Application.Exit();
         }
     }
 }

@@ -56,5 +56,11 @@ namespace Pond_s_Shop
             }
             
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            // Code
+            Program.closeProgram();
+        }
     }
 }
