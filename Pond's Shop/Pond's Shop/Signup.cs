@@ -23,7 +23,7 @@ namespace Pond_s_Shop
         {
             Login lg = new Login();
             lg.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void CallAccept(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace Pond_s_Shop
                 MessageBox.Show("Sign up successful");
                 Login lin = new Login();
                 lin.Show();
-                this.Close();
+                this.Hide();
             }
             
         }

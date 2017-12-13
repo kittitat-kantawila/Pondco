@@ -86,5 +86,12 @@ namespace Pond_s_Shop
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Hide();
+        }
     }
 }
