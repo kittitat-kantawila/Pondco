@@ -2,7 +2,6 @@ C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\bin\D
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\bin\Debug\Pond's Shop.exe
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\bin\Debug\Pond's Shop.pdb
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csprojResolveAssemblyReference.cache
-C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Form1.resources
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Properties.Resources.resources
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csproj.GenerateResource.Cache
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csproj.CoreCompileInputs.cache
@@ -19,3 +18,5 @@ D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csproj.Generate
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.csproj.CoreCompileInputs.cache
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.exe
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.pdb
+C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Login.resources
+C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Signup.resources
