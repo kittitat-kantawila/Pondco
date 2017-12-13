@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userfield = new System.Windows.Forms.TextBox();
+            this.passfield = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,7 +46,6 @@
             this.label1.Size = new System.Drawing.Size(179, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "กรุณาเข้าสู่ระบบ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -68,22 +67,22 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Password :";
             // 
-            // textBox1
+            // userfield
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox1.Location = new System.Drawing.Point(562, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 31);
-            this.textBox1.TabIndex = 3;
+            this.userfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.userfield.Location = new System.Drawing.Point(562, 138);
+            this.userfield.Name = "userfield";
+            this.userfield.Size = new System.Drawing.Size(419, 31);
+            this.userfield.TabIndex = 3;
             // 
-            // textBox2
+            // passfield
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox2.Location = new System.Drawing.Point(562, 255);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(419, 31);
-            this.textBox2.TabIndex = 4;
+            this.passfield.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.passfield.Location = new System.Drawing.Point(562, 255);
+            this.passfield.Name = "passfield";
+            this.passfield.PasswordChar = '*';
+            this.passfield.Size = new System.Drawing.Size(419, 31);
+            this.passfield.TabIndex = 4;
             // 
             // button1
             // 
@@ -94,6 +93,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Sign in";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Call_Signin);
             // 
             // button2
             // 
@@ -113,8 +113,8 @@
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passfield);
+            this.Controls.Add(this.userfield);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -131,8 +131,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userfield;
+        private System.Windows.Forms.TextBox passfield;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
