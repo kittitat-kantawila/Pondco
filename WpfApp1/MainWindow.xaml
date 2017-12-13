@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Pond's Shop" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="375*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button1" Content="login" HorizontalAlignment="Left" Height="42" Margin="49.689,187,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.582,-1.318" Grid.Column="2" Click="Button_Click"/>
+        <Button x:Name="button2" Content="sign up" HorizontalAlignment="Left" Height="42" Margin="49.689,247,0,0" VerticalAlignment="Top" Width="132" Grid.Column="2" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="58.689,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Grid.Column="2"><Run Text="กรุณา "/><Run Text="Login "/><Run Text="เข้าสู่ระบบ"/></TextBlock>
+        <TextBox x:Name="text1" HorizontalAlignment="Left" Height="21" Margin="59,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="text2" HorizontalAlignment="Left" Height="23" Margin="59,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Grid.ColumnSpan="2" Content="Username :" HorizontalAlignment="Left" Height="31" Margin="56,112,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label Grid.ColumnSpan="2" Content="Password :" HorizontalAlignment="Left" Height="31" Margin="56,148,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+
+    </Grid>
+</Window>
