@@ -37,7 +37,7 @@ namespace WpfApp1
         }
 
         //open connection to database
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -80,8 +80,24 @@ namespace WpfApp1
             }
         }
 
+        public void InsertQuery(string query)
+        {
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
         //Insert statement
-        public void Insert()
+        private void Insert()
         {
             string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
 
@@ -99,8 +115,28 @@ namespace WpfApp1
             }
         }
 
+        public void UpdateQuery(string query)
+        {
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //create mysql command
+                MySqlCommand cmd = new MySqlCommand();
+                //Assign the query using CommandText
+                cmd.CommandText = query;
+                //Assign the connection using Connection
+                cmd.Connection = connection;
+
+                //Execute query
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
         //Update statement
-        public void Update()
+        private void Update()
         {
             string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
 
@@ -122,8 +158,19 @@ namespace WpfApp1
             }
         }
 
+
+        public void DeleteQuery(string query)
+        {
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
+
         //Delete statement
-        public void Delete()
+        private void Delete()
         {
             string query = "DELETE FROM tableinfo WHERE name='John Smith'";
 
