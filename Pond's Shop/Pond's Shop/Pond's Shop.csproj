@@ -83,6 +83,26 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="inventory_pondDataSet.xsc">
+      <DependentUpon>inventory_pondDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="inventory_pondDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventory_pondDataSet.xss">
+      <DependentUpon>inventory_pondDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="inventory_pondDataSet1.xsc">
+      <DependentUpon>inventory_pondDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="inventory_pondDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventory_pondDataSet1.xss">
+      <DependentUpon>inventory_pondDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

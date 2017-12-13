@@ -20,3 +20,4 @@ D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.exe
 D:\PondCoop\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond's Shop.pdb
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Login.resources
 C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Signup.resources
+C:\Users\PONDlnwza581\Desktop\AV DB Project\Pondco\Pond's Shop\Pond's Shop\obj\Debug\Pond_s_Shop.Shopping.resources
