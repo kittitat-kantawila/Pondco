@@ -66,6 +66,8 @@ namespace Pond_s_Shop
         //logout
         private void button4_Click(object sender, EventArgs e)
         {
+            DBConnect dbc = new DBConnect();
+            dbc.DeleteQuery("DELETE FROM was_buy WHERE status=0");
             Login newlogin = new Login();
             newlogin.Show();
             this.Hide();
