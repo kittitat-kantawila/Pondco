@@ -16,9 +16,9 @@
         <Button x:Name="button2" Content="sign up" HorizontalAlignment="Left" Height="42" Margin="49.689,247,0,0" VerticalAlignment="Top" Width="132" Grid.Column="2" Click="Button_Click_1"/>
         <TextBlock HorizontalAlignment="Left" Height="25" Margin="58.689,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Grid.Column="2"><Run Text="กรุณา "/><Run Text="Login "/><Run Text="เข้าสู่ระบบ"/></TextBlock>
         <TextBox x:Name="text1" HorizontalAlignment="Left" Height="21" Margin="59,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="text2" HorizontalAlignment="Left" Height="23" Margin="59,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Grid.ColumnSpan="2" Content="Username :" HorizontalAlignment="Left" Height="31" Margin="56,112,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
         <Label Grid.ColumnSpan="2" Content="Password :" HorizontalAlignment="Left" Height="31" Margin="56,148,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <PasswordBox Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="59,148,0,0" VerticalAlignment="Top" Width="285"/>
 
     </Grid>
 </Window>
